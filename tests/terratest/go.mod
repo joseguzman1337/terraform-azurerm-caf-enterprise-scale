@@ -1,9 +1,10 @@
 module terratest
 
-go 1.22.3
+go 1.24.1
+
 require (
 	github.com/Azure/terratest-terraform-fluent v0.9.0
-	github.com/stretchr/testify v1.10.0
+	github.com/stretchr/testify v1.11.0
 )
 
 require (
