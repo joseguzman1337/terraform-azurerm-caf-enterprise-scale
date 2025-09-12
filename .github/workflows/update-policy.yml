@@ -50,7 +50,7 @@ jobs:
           path: ${{ env.remote_repository }}
           ref: ${{ env.remote_repository_branch }}
 
-      - uses: actions/create-github-app-token@3ff1caaa28b64c9cc276ce0a02e2ff584f3900c5 # v2.0.2
+      - uses: actions/create-github-app-token@def152b8a737443d7af6c5722c6389146fe90c90 # v2.1.2
         id: generate-token
         with:
           app-id: ${{ secrets.APP_ID }}
