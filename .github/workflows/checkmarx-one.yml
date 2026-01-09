@@ -38,7 +38,7 @@ jobs:
     steps:
       # This step checks out a copy of your repository.
       - name: Checkout repository
-        uses: actions/checkout@v6
+        uses: actions/checkout@v6.0.1
       # This step creates the Checkmarx One scan
       - name: Checkmarx One scan
         uses: checkmarx/ast-github-action@ef313c2c19e03e90ae35e795724fb1d20830dc33
