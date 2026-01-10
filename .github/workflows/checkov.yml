@@ -21,7 +21,7 @@ jobs:
 
     steps:
       - name: Clear Cache
-        uses: actions/cache@v4.2.4
+        uses: actions/cache@v5.0.1
         with:
           path: |
             ./.github/workflows/
@@ -35,7 +35,7 @@ jobs:
           egress-policy: audit
 
       - name: Checkout Code
-        uses: actions/checkout@v6
+        uses: actions/checkout@v6.0.1
 
       - name: Checkov Scan
         id: checkov_scan
