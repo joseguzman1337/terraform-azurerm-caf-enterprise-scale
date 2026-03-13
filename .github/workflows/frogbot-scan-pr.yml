@@ -28,7 +28,7 @@ jobs:
         with:
           ref: ${{ github.event.pull_request.head.sha }}
 
-      - uses: jfrog/frogbot@55998588bc80f18e8e0723587d9daf4af9dcb873  # v2.28.0
+      - uses: jfrog/frogbot@f33c6d196969c81ff143ec54254563f0f8258b8c  # v2.29.4
         env:
           # [Mandatory if the two conditions below are met]
           # 1. The project uses npm, yarn 2, NuGet or .NET to download its dependencies
