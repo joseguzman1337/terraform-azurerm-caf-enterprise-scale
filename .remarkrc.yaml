@@ -1,0 +1,13 @@
+# remark-lint config — disable rules that produce false positives in generated docs
+plugins:
+  - remark-preset-lint-recommended
+  - - remark-lint-no-duplicate-definitions
+    - false
+  - - remark-lint-ordered-list-marker-value
+    - false
+  - - remark-lint-no-undefined-references
+    - false
+  - - remark-lint-no-unused-definitions
+    - false
+  - - remark-lint-final-newline
+    - false

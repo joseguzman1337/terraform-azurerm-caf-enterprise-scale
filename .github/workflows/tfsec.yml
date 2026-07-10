@@ -13,6 +13,9 @@ on:
   schedule:
     - cron: '43 21 * * 2'
 
+permissions:
+  contents: read
+
 jobs:
   tfsec:
     name: Run tfsec sarif report
@@ -24,7 +27,7 @@ jobs:
 
     steps:
       - name: Clone repo
-        uses: actions/checkout@v6.0.2
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd  # v6.0.2
 
       - name: Run tfsec
         uses: aquasecurity/tfsec-sarif-action@21ded20e8ca120cd9d3d6ab04ef746477542a608
@@ -32,7 +35,7 @@ jobs:
           sarif_file: tfsec.sarif
 
       - name: Upload SARIF file
-        uses: github/codeql-action/upload-sarif@v4.34.1
+        uses: github/codeql-action/upload-sarif@38697555549f1db7851b81482ff19f1fa5c4fedc  # v4.34.1
         with:
           # Path to SARIF file relative to the root of the repository
           sarif_file: tfsec.sarif

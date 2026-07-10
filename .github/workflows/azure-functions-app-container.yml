@@ -40,15 +40,15 @@ jobs:
     environment: dev
     steps:
     - name: 'Checkout GitHub Action'
-      uses: actions/checkout@v6.0.2
+      uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd  # v6.0.2
 
     - name: 'Login via Azure CLI'
-      uses: azure/login@v3
+      uses: azure/login@532459ea530d8321f2fb9bb10d1e0bcf23869a43  # v3
       with:
         creds: ${{ secrets.AZURE_RBAC_CREDENTIALS }}
 
     - name: 'Docker Login'
-      uses: azure/docker-login@v2
+      uses: azure/docker-login@15c4aadf093404726ab2ff205b2cdd33fa6d054c  # v2
       with:
         login-server: ${{ env.LOGIN_SERVER }}
         username: ${{ secrets.REGISTRY_USERNAME }}
@@ -63,7 +63,7 @@ jobs:
         docker push ${{ env.REGISTRY }}/${{ env.NAMESPACE }}/${{ env.IMAGE }}:${{ env.TAG }}
 
     - name: 'Run Azure Functions Container Action'
-      uses: Azure/functions-container-action@v1
+      uses: Azure/functions-container-action@703e5fc11e096bf69349f4ad4ad2981f9d7cd414  # v1
       id: fa
       with:
         app-name: ${{ env.AZURE_FUNCTIONAPP_NAME }}
