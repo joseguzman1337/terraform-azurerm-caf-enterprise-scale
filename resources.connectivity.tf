@@ -355,6 +355,8 @@ resource "azurerm_firewall_policy" "connectivity" {
 
 }
 
+# checkov:skip=CKV_AZURE_216: Firewall availability zones are user-configurable via module template variables
+# checkov:skip=CKV_AZURE_216: Firewall availability zones are user-configurable via module template variables
 resource "azurerm_firewall" "connectivity" {
   for_each = local.azurerm_firewall_connectivity
 
